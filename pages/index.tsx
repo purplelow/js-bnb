@@ -7,8 +7,8 @@ import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
 
-import { PypDataType } from "./api/pyp";
-import { Zp1DataType } from "./api/zp1";
+import { pypData, PypDataType } from "./api/pyp";
+import { zp1Data, Zp1DataType } from "./api/zp1";
 
 export default function Home({
   exploreData,
@@ -80,13 +80,16 @@ export const getStaticProps: GetStaticProps = async () => {
   // ).then((response) => response.json());
   // // .then((response) => console.log(response))
   // // .catch((err) => console.error(err));
-  const exploreData = await fetch("http://localhost:3001/api/pyp").then((res) =>
-    res.json()
-  );
+  // const exploreData = await fetch("http://localhost:3001/api/pyp").then((res) =>
+  //   res.json()
+  // );
 
-  const cardsData = await fetch("http://localhost:3001/api/zp1").then((res) =>
-    res.json()
-  );
+  // const cardsData = await fetch("http://localhost:3001/api/zp1").then((res) =>
+  //   res.json()
+  // );
+
+  const exploreData = pypData;
+  const cardsData = zp1Data;
 
   return {
     props: {

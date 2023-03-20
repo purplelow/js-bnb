@@ -12,7 +12,7 @@ export interface PypDataType {
 }
 export interface PypDataTypes extends Array<PypDataType> {}
 
-const pypData = [
+export const pypData = [
   {
     img: "https://links.papareact.com/5j2",
     location: "London",

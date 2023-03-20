@@ -6,7 +6,7 @@ export interface Zp1DataType {
 }
 export interface Zp1DataTypes extends Array<Zp1DataType> {}
 
-const zp1Data = [
+export const zp1Data = [
   {
     img: "https://links.papareact.com/2io",
     title: "Outdoor getaway",
